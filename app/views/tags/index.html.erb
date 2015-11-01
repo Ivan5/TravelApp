@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tags</title>
+	<link rel="stylesheet" href="../app/assets/stylesheets/application.css">
+</head>
+<body>
+	<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1tm.svg" width="80">
+    <h1>Viajes Panama</h1>
+  </div>
+</div>
+
+<div class="tags">
+  <div class="container">
+    <div class="cards row">
+    	<% @tags.each do |t| %>
+      <div class="card col-xs-4">
+        <%= image_tag t.image %>
+        <h2><%= t.title %></h2>
+        <%= link_to "Ver mas", tag_path(t) %>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
